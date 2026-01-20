@@ -1,0 +1,52 @@
+.match-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.match-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+.fade-in {
+  animation: fade 0.35s ease;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.match-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.match-card {
+  background: #020617;
+  border-radius: 18px;
+  padding: 20px;
+  position: relative;
+}
+
+.status-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  font-size: 12px;
+}
+
+.status-badge.live {
+  color: #3b82f6;
+}
+
+.team img {
+  width: 32px;
+  filter: invert(1);
+}
