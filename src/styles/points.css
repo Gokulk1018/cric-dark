@@ -1,0 +1,83 @@
+.right-panel {
+  background: linear-gradient(180deg, #0f172a, #020617);
+  padding: 28px;
+}
+
+.panel-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.points-table {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.points-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(22, 29, 47, 0.85);
+  padding: 14px 16px;
+  border-radius: 14px;
+  transition: background 0.2s ease;
+}
+
+.points-row:hover {
+  background: rgba(59, 130, 246, 0.12);
+}
+
+.team-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.rank {
+  font-size: 13px;
+  opacity: 0.6;
+  width: 16px;
+}
+
+.team-info img {
+  width: 26px;
+}
+
+.team-name {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 28px);
+  gap: 6px;
+  text-align: center;
+  font-size: 13px;
+}
+
+.pts {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.show-more {
+  margin-top: 10px;
+  width: 100%;
+  padding: 8px;
+  border-radius: 10px;
+  border: none;
+  background: rgba(255,255,255,0.06);
+  color: var(--text-muted);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.show-more:hover {
+  background: rgba(59,130,246,0.15);
+  color: white;
+}
+

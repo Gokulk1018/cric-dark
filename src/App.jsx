@@ -7,7 +7,7 @@ import Stats from './pages/Stats'
 import Teams from './pages/Teams'
 import Messages from './pages/Messages'
 import Settings from './pages/Settings'
-
+import MatchDetails from "./pages/MatchDetails";
 function App() {
   return (
     <BrowserRouter>
@@ -19,6 +19,7 @@ function App() {
           <Route path="/teams" element={<Teams />} />
           <Route path="/messages" element={<Messages />} />
           <Route path="/settings" element={<Settings />} />
+          <Route path="/match/:id" element={<MatchDetails />} />
         </Route>
       </Routes>
     </BrowserRouter>
