@@ -7,33 +7,33 @@ export default function MatchCard({ match, status }) {
 
   return (
     <div className="match-card">
-      <span className={`status-badge ${status.toLowerCase()}`}>
-        {status}
-      </span>
+      <div className="card-header">
+        <span className={`badge ${status.toLowerCase()}`}>{status}</span>
+      </div>
 
-      <div className="teams-row">
+      <div className="teams">
         <div className="team">
-          <img src={logoA} alt={match.teamA} />
-          <strong>{match.teamA}</strong>
+          <img src={logoA} />
+          <span>{match.teamA}</span>
         </div>
 
         <span className="vs">VS</span>
 
         <div className="team">
-          <img src={logoB} alt={match.teamB} />
-          <strong>{match.teamB}</strong>
+          <img src={logoB} />
+          <span>{match.teamB}</span>
         </div>
       </div>
 
-      <div className="scores">
-        {match.scoreA && <span>{match.scoreA}</span>}
-        {match.scoreB && <span className="muted">{match.scoreB}</span>}
-        {match.time && <span className="muted">{match.time}</span>}
-        {match.result && <span className="muted">{match.result}</span>}
+      <div className="score">
+        {match.scoreA && <div>{match.scoreA}</div>}
+        {match.scoreB && <div className="muted">{match.scoreB}</div>}
+        {match.time && <div className="muted">{match.time}</div>}
+        {match.result && <div className="muted">{match.result}</div>}
       </div>
 
       {status === "LIVE" && (
-        <button className="watch-btn">Watch Live</button>
+        <button className="watch">Watch Live</button>
       )}
     </div>
   );

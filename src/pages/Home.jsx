@@ -5,7 +5,7 @@ import "../styles/home.css";
 
 export default function Home() {
   return (
-    <div className="home">
+    <>
       <section
         className="hero"
         style={{ backgroundImage: `url(${HERO_IMAGE})` }}
@@ -13,23 +13,23 @@ export default function Home() {
         <div className="hero-overlay">
           <h1>Virat Kohli Special</h1>
           <p>International & IPL Action Live</p>
-          <button className="primary-btn">Watch Live</button>
+          <button>Watch Live</button>
         </div>
       </section>
 
       <h2>Live Matches</h2>
-      <div className="match-grid">
-        {matches.live.map((m) => (
+      <div className="grid">
+        {matches.live.map(m => (
           <MatchCard key={m.id} match={m} status="LIVE" />
         ))}
       </div>
 
       <h2>Upcoming Matches</h2>
-      <div className="match-grid">
-        {matches.upcoming.map((m) => (
+      <div className="grid">
+        {matches.upcoming.map(m => (
           <MatchCard key={m.id} match={m} status="UPCOMING" />
         ))}
       </div>
-    </div>
+    </>
   );
 }

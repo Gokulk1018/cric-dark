@@ -1,52 +1,65 @@
 .match-card {
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  background: linear-gradient(180deg, #161d2f, #0f172a);
+  border-radius: 20px;
+  padding: 24px;
+  transition: all 0.25s ease;
 }
 
 .match-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
 }
 
-.fade-in {
-  animation: fade 0.35s ease;
+.card-header {
+  display: flex;
+  justify-content: flex-end;
 }
 
-@keyframes fade {
-  from {
-    opacity: 0;
-    transform: translateY(8px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.match-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-
-.match-card {
-  background: #020617;
-  border-radius: 18px;
-  padding: 20px;
-  position: relative;
-}
-
-.status-badge {
-  position: absolute;
-  top: 12px;
-  right: 12px;
+.badge {
   font-size: 12px;
+  font-weight: 700;
+  color: var(--accent);
 }
 
-.status-badge.live {
-  color: #3b82f6;
+.teams {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.team {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  font-weight: 600;
 }
 
 .team img {
-  width: 32px;
-  filter: invert(1);
+  width: 40px;
+}
+
+.vs {
+  opacity: 0.6;
+}
+
+.score {
+  font-size: 15px;
+  margin-bottom: 16px;
+}
+
+.muted {
+  color: var(--text-muted);
+}
+
+.watch {
+  background: var(--accent);
+  border: none;
+  padding: 12px;
+  border-radius: 12px;
+  width: 100%;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
 }

@@ -4,7 +4,8 @@ import "../styles/sidebar.css";
 export default function Sidebar() {
   return (
     <aside className="sidebar">
-      <h2 className="logo">CRIC.CO</h2>
+      <div className="brand">CRIC.CO</div>
+
       <nav>
         <NavLink to="/">Home</NavLink>
         <NavLink to="/matches">Matches</NavLink>

@@ -4,9 +4,9 @@ import MatchCard from "../components/MatchCard";
 import Tabs from "../components/Tabs";
 
 export default function Matches() {
-  const [active, setActive] = useState("LIVE");
+  const [tab, setTab] = useState("LIVE");
 
-  const map = {
+  const data = {
     LIVE: matches.live,
     UPCOMING: matches.upcoming,
     COMPLETED: matches.completed,
@@ -15,20 +15,14 @@ export default function Matches() {
   return (
     <>
       <h2>Matches</h2>
-
       <Tabs
         tabs={["LIVE", "UPCOMING", "COMPLETED"]}
-        active={active}
-        onChange={setActive}
+        active={tab}
+        onChange={setTab}
       />
-
-      <div className="match-grid fade-in">
-        {map[active].map((m) => (
-          <MatchCard
-            key={m.id}
-            match={m}
-            status={active}
-          />
+      <div className="grid">
+        {data[tab].map(m => (
+          <MatchCard key={m.id} match={m} status={tab} />
         ))}
       </div>
     </>
